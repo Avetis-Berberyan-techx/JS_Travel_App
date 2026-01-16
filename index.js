@@ -1,4 +1,4 @@
-const API_URL = "https://restcountries.com/v3.1/name/";
+const API_URL = "https://restcountrie.com/v3.1/name/";
 let searchedCountryData = {};
 let liked = [];
 let saved = [];
@@ -16,7 +16,7 @@ const countryDisplay = document.querySelector(".main__display");
 
 // --- Cookie Functions ---
 
-const setCookie = (name, value, days = 365) => {
+const setCookie = (name, value, days = 10) => {
   const date = new Date();
   date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
   const expires = "expires=" + date.toUTCString();
@@ -124,7 +124,6 @@ function fetchCountryData(countryName) {
       .then((response) => {
         if (!response.ok) {
           countryDisplay.innerHTML = `<h2>It is not a country</h2>`;
-          reject("Invalid country name");
         }
         return response.json();
       })
@@ -164,7 +163,9 @@ countrySearchBtn.addEventListener("click", () => {
       .then((data) => {
         countryDisplay.innerHTML = createDisplayCard(data);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.log("failed to fetch");
+      });
   }
 });
 
