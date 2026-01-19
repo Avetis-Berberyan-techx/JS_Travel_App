@@ -1,0 +1,327 @@
+/* =========================
+   Global Styles
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   Wrapper Block
+========================= */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =========================
+   Header Block
+========================= */
+.header {
+  background-color: #4caf50;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* =========================
+   Main Block
+========================= */
+.main {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================
+   Main Elements
+========================= */
+
+/* Search Section */
+.main__search {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.main__search-input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+  transition: border-color 0.3s;
+}
+
+.main__search-input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.main__search-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main__search-button:hover {
+  background-color: #45a049;
+}
+
+/* Headings inside main sections */
+.main h2 {
+  font-size: 1.5rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.main__navigator {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.main__navigator button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: #4caf50;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom-color 0.25s ease;
+}
+
+.main__navigator button:hover {
+  border-bottom-color: #4caf50;
+}
+
+/* Display, Liked, and Saved Sections */
+.main__display,
+.main__liked,
+.main__saved {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  min-height: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main__liked {
+  display: block;
+}
+.main__saved {
+  display: none;
+}
+
+/* =========================
+   Modifiers Example
+========================= */
+/* Disabled button */
+.main__search-button--disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+/* =========================
+   Card Block
+========================= */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Card Header: Country Name + Flag */
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__country-name {
+  font-size: 1.5rem;
+  color: #4caf50;
+  margin: 0;
+}
+
+.card__flag {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Card Body: Info */
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__info {
+  font-size: 1rem;
+}
+
+.card__link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+/* Card Footer: Buttons */
+.card__footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.card__button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card__button--like {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.card__button--like:hover {
+  background-color: #ff4b4b;
+}
+
+.card__button--save {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.card__button--save:hover {
+  background-color: #45a049;
+}
+/* =========================
+   Table Styles
+========================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table__head {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.table__row {
+  border-bottom: 1px solid #ddd;
+}
+
+.table__cell {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.table__cell img.table__flag {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Links */
+.table__link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.table__link:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.table__button {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px;
+  transition: background-color 0.3s;
+}
+
+.table__button--like {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.table__button--like:hover {
+  background-color: #ff4b4b;
+}
+
+.table__button--save {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.table__button--save:hover {
+  background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .table__cell {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+  .table__cell img.table__flag {
+    width: 40px;
+    height: 25px;
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="" href="style.css" />
+    <title>Travel Agent</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header Block -->
+      <header class="header">
+        <h1 class="header__title">Travel Agent</h1>
+      </header>
+
+      <!-- Main Block -->
+      <main class="main">
+        <!-- Search Element -->
+        <section class="main__search">
+          <input
+            type="text"
+            class="main__search-input"
+            id="country-input"
+            placeholder="Enter Country"
+            value=""
+          />
+          <button
+            type="button"
+            class="main__search-button"
+            id="country-search-button"
+          >
+            Search
+          </button>
+        </section>
+
+        <!-- Display Element -->
+        <h2>Country</h2>
+        <section class="main__display">
+          <!-- <div class="card">
+            <div class="card__header">
+              <h3 class="card__country-name">France</h3>
+              <img
+                src="https://flagcdn.com/fr.svg"
+                alt="France Flag"
+                class="card__flag"
+              />
+            </div>
+            <div class="card__body">
+              <p class="card__info"><strong>Capital:</strong> Paris</p>
+              <p class="card__info"><strong>Population:</strong> 67,413,000</p>
+              <p class="card__info"><strong>Region:</strong> Europe</p>
+              <p class="card__info"><strong>Currency:</strong> Euro (€)</p>
+              <p class="card__info"><strong>Languages:</strong> French</p>
+              <p class="card__info"><strong>Timezone:</strong> UTC+1</p>
+              <p class="card__info">
+                <strong>Map:</strong>
+                <a
+                  href="https://www.google.com/maps/place/France"
+                  target="_blank"
+                  class="card__link"
+                  >View on Google Maps</a
+                >
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__button card__button--like">Like ❤️</button>
+              <button class="card__button card__button--save">Save 💾</button>
+            </div>
+          </div> -->
+        </section>
+
+        <!-- Liked Section -->
+        <section class="main__navigator">
+          <button type="button" id="liked-list"><h2>liked</h2></button>
+          <button type="button" id="saved-list"><h2>saved</h2></button>
+        </section>
+        <section class="main__liked">
+          <table class="table">
+            <thead class="table__head">
+              <tr class="table__row">
+                <th class="table__cell">Country</th>
+                <th class="table__cell">Flag</th>
+                <th class="table__cell">Capital</th>
+                <th class="table__cell">Population</th>
+                <th class="table__cell">Region</th>
+                <th class="table__cell">Currency</th>
+                <th class="table__cell">Languages</th>
+                <th class="table__cell">Timezone</th>
+                <th class="table__cell">Map</th>
+              </tr>
+            </thead>
+            <tbody class="table__body"></tbody>
+          </table>
+        </section>
+
+        <!-- Saved Section -->
+        <section class="main__saved">
+          <table class="table">
+            <thead class="table__head">
+              <tr class="table__row">
+                <th class="table__cell">Country</th>
+                <th class="table__cell">Flag</th>
+                <th class="table__cell">Capital</th>
+                <th class="table__cell">Population</th>
+                <th class="table__cell">Region</th>
+                <th class="table__cell">Currency</th>
+                <th class="table__cell">Languages</th>
+                <th class="table__cell">Timezone</th>
+                <th class="table__cell">Map</th>
+              </tr>
+            </thead>
+            <tbody class="table__body"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
