@@ -1,4 +1,4 @@
-const API_URL = "https://restcountrie.com/v3.1/name/";
+const API_URL = "https://restcountries.com/v3.1/name/";
 let searchedCountryData = {};
 let liked = [];
 let saved = [];
@@ -108,7 +108,7 @@ const countryIncludes = (country, countriesList) => {
 // Render liked or saved countries
 const renderCountries = (whichList, countries) => {
   const table = document.querySelector(
-    `.main__${whichList} .table .table__body`
+    `.main__${whichList} .table .table__body`,
   );
   if (!table) return; // safety check
   table.innerHTML = ""; // clear table before rendering
@@ -164,6 +164,7 @@ countrySearchBtn.addEventListener("click", () => {
         countryDisplay.innerHTML = createDisplayCard(data);
       })
       .catch((err) => {
+        countryDisplay.innerHTML = `<h2>fetching problem</h2>`;
         console.log("failed to fetch");
       });
   }
